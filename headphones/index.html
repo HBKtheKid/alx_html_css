@@ -3,18 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Headphones Hero Section</title>
+    <title>Headphones Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="header">
-      <div class="logo-container">
-        <div class="logo-icon">
-          <!-- Brain icon would go here -->
-        </div>
-        <div class="logo-text">Headphones</div>
-      </div>
-      <div class="menu-icon">☰</div>
+      <a href="#" class="logo">
+        <img src="logo.svg" alt="Headphones Logo" />
+        <span>HEADPHONES</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#what-we-do">what we do</a>
+        <a href="#results">our results</a>
+        <a href="#contact">contact us</a>
+      </nav>
     </header>
 
     <section class="hero">
@@ -23,8 +25,125 @@
         <p class="hero-subtitle">
           Lorem ipsum dolor set amet lorem ipsum dolor set
         </p>
-        <a href="#" class="cta-button">Call to action</a>
+        <a href="#" class="btn">CALL TO ACTION</a>
+        <p class="hero-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
       </div>
     </section>
+
+    <section id="what-we-do" class="what-we-do">
+      <div class="container">
+        <h2 class="section-title">What we do...</h2>
+        <p class="section-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <div class="services">
+          <div class="service-item">
+            <div class="service-icon">♪</div>
+            <h3 class="service-title">Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">▶</div>
+            <h3 class="service-title">Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">♫</div>
+            <h3 class="service-title">Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">👂</div>
+            <h3 class="service-title">Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="results">
+      <div class="container">
+        <h2 class="section-title">Our results speak for themselves</h2>
+        <p class="section-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number">+2%</div>
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">+2%</div>
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">+2%</div>
+            <p>Lorem ipsum dolor</p>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">+2%</div>
+            <p>Lorem ipsum dolor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact us</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              class="form-control"
+              placeholder="Your message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">CALL TO ACTION</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <a href="#" class="logo">
+          <img src="logo.svg" alt="Headphones Logo" />
+        </a>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">t</a>
+          <a href="#" aria-label="Instagram">i</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

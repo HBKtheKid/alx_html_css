@@ -10,10 +10,11 @@
 /* Variables */
 :root {
   --primary-color: #ff4d5a;
-  --text-color: #ffffff;
-  --overlay-color: rgba(0, 0, 0, 0.7);
-  --header-height: 80px;
-  --container-padding: 2rem;
+  --dark-blue: #0a1f44;
+  --text-color: #333333;
+  --light-text: #ffffff;
+  --section-padding: 5rem 2rem;
+  --container-width: 1200px;
 }
 
 /* Base styles */
@@ -23,98 +24,477 @@ body {
   color: var(--text-color);
 }
 
-/* Header styles */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header/Navigation */
 .header {
   position: fixed;
   width: 100%;
-  height: var(--header-height);
-  padding: 1rem var(--container-padding);
+  padding: 1rem 2rem;
+  background: transparent;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
 }
 
-.logo-container {
+.logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  color: var(--light-text);
+  text-decoration: none;
 }
 
-.logo-icon {
-  width: 40px;
+.logo img {
   height: 40px;
-  background-color: #1a1a1a;
-  border-radius: 8px;
 }
 
-.logo-text {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.nav-links {
+  display: flex;
+  gap: 2rem;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+.nav-links a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
   min-height: 100vh;
-  position: relative;
+  background: linear-gradient(rgba(10, 31, 68, 0.8), rgba(10, 31, 68, 0.8)),
+    url("./headphones_hero_1.jpg") center/cover;
   display: flex;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  background: linear-gradient(var(--overlay-color), var(--overlay-color)),
-    url("./01_headphones_desktop@2x.png") center/cover no-repeat;
+  color: var(--light-text);
+  padding: var(--section-padding);
 }
 
 .hero-content {
   max-width: 800px;
-  padding: 0 var(--container-padding);
+  margin: 0 auto;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   opacity: 0.9;
 }
 
-.cta-button {
+.hero-description {
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* What We Do Section */
+.what-we-do {
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-item {
+  padding: 1.5rem;
+}
+
+.service-icon {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  margin-bottom: 1rem;
+}
+
+/* Results Section */
+.results {
+  background: linear-gradient(rgba(10, 31, 68, 0.9), rgba(10, 31, 68, 0.9)),
+    url("results-bg.jpg") center/cover;
+  padding: var(--section-padding);
+  color: var(--light-text);
+  text-align: center;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  background: var(--primary-color);
+  padding: 2rem;
+  clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0 38%);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea.form-control {
+  min-height: 150px;
+}
+
+/* Footer */
+.footer {
+  background: var(--dark-blue);
+  padding: 3rem 2rem;
+  color: var(--light-text);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: var(--light-text);
+  font-size: 1.5rem;
+}
+
+/* Button styles */
+.btn {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background: var(--primary-color);
+  color: var(--light-text);
   text-decoration: none;
   border-radius: 50px;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.cta-button:hover {
-  background-color: #ff3344;
+.btn:hover {
+  background: #ff3344;
 }
 
-/* Mobile styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
   .hero-title {
     font-size: 2rem;
   }
 
+  .nav-links {
+    display: none;
+  }
+
+  .services,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+/* Tablet Viewport (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+  /* Base adjustments */
+  :root {
+    --section-padding: 4rem 1.5rem;
+  }
+
+  /* Header/Navigation */
+  .header {
+    padding: 1rem;
+    background: var(--dark-blue);
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* What We Do Section */
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-item {
+    padding: 1.2rem;
+  }
+
+  /* Results Section */
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem;
+  }
+
+  /* Contact Section */
+  .contact-form {
+    max-width: 500px;
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile Viewport (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  /* Base adjustments */
+  :root {
+    --section-padding: 3rem 1rem;
+  }
+
+  /* Header/Navigation */
+  .header {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none; /* Hide regular nav */
+  }
+
+  /* Add hamburger menu */
+  .mobile-menu-button {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Mobile menu when active */
+  .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--dark-blue);
+    padding: 1rem;
+  }
+
+  .mobile-nav.active {
+    display: block;
+  }
+
+  .mobile-nav a {
+    display: block;
+    color: var(--light-text);
+    padding: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: auto;
+    padding-top: 100px;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  /* What We Do Section */
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .service-item {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  /* Results Section */
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stat-item {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  /* Contact Section */
+  .contact-form {
+    padding: 0 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 0.7rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Viewport (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  /* Additional adjustments for very small screens */
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .service-item {
+    padding: 1rem;
+  }
+
+  .stat-item {
+    max-width: 200px;
+  }
+
+  /* Adjust logo size */
+  .logo img {
+    height: 30px;
+  }
+
+  .logo span {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust form elements */
+  .form-control {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Additional utility classes for responsive behavior */
+.hide-on-mobile {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+
+  .hide-on-mobile {
+    display: block !important;
+  }
+}
+
+/* Handle landscape orientation on mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    min-height: 450px;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item {
+    max-width: none;
   }
 }
