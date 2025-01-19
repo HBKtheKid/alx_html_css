@@ -69,7 +69,7 @@ body {
   justify-content: center;
   text-align: center;
   background: linear-gradient(var(--overlay-color), var(--overlay-color)),
-    url("hero-image.jpg") center/cover no-repeat;
+    url("./01_headphones_desktop@2x.png") center/cover no-repeat;
 }
 
 .hero-content {
